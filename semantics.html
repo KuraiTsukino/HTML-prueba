@@ -17,6 +17,7 @@
             background-color: lightblue;
         }
     </style>
+
     <title>Tags semánticos de HTML</title>
 </head>
 
@@ -53,6 +54,46 @@
         <img src="gatito.jpg" alt="Foto de gatito">
         <figcaption>Figura 1.- Foto de gatito</figcaption>
     </figure>
+
+    <figure>
+        <svg width="200" height="200">
+            <circle cx="50" cy="50" r="40" stroke="pink" stroke-width="4" fill="yellow" />
+        </svg>
+    </figure>
+
+    <figure>
+        <svg width="400" height="400">
+            <rect x="10" y="10" width="300" height="100" stroke="blue" stroke-width="4" fill="green" />
+        </svg>
+    </figure>
+
+    <figure>
+        <svg width="200" height="200">
+            <polygon points="100,10 40,198 190,78 10,78 160,198" stroke="red" stroke-width="4" fill="pink"/>
+        </svg>
+    </figure>
+
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d"); // contexto 2d de la variable c
+        ctx.font = "32px Arial";
+        ctx.fillText("Hello World", 10, 50);
+        ctx.strokeText("Hello World", 10, 100);
+    </script>
+    <br />
+    <canvas id="myCanvas2" width="200" height="100"></canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        var gradiente = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        gradiente.addColorStop(0, "pink ");
+        gradiente.addColorStop(1, "white");
+        ctx.fillStyle = gradiente;
+        ctx.fillRect(10, 10, 150, 80);
+    </script>
 
     <footer>
         <p>Copyright &copy; 2022 Sandy Mena</p>
