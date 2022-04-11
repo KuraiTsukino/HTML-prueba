@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de práctica de formulario" />
+    <meta name="author" content="Sandy Mena" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <form>
+      <!-- inputs texto-->
+      <label for="nombre1">Nombre: </label> <br />
+      <input type="text" id="nombre1" /> <br />
+      <label for="nombre2">Segundo Nombre: </label> <br />
+      <input type="text" id="nombre2" /> <br />
+
+      <!--inputs diferentes tipos-->
+      password: <input type="password" id="pwd" name="pwd" /> <br />
+      fecha: <input type="date" id="fecha" name="fecha" /> <br />
+      fecha con max: <input type="date" id="fechaMax" name="fechaMax" max="2020-12-31" /> <br />
+      fecha con min: <input type="date" id="fechaMin" name="fechaMin" min="2020-01-01" /> <br />
+      email: <input type="email" id="email" name="email" /> <br />
+      número: <input type="number" id="numero" name="numero" /> <br />
+      número con límites: <input type="number" id="numeroLim" name="numeroLim" min="0" max="100" /> <br />
+      rango: <input type="range" id="rango" name="rango" min="0" max="100" /> <br />
+      color: <input type="color" id="color" name="color" /> <br />
+
+      <!-- inputs radio-->
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label> <br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="css">CSS</label> <br />
+      <input type="radio" id="js" name="fav_language" value="JS" />
+      <label for="js">JS</label> <br />
+
+      <!-- inputs checkbox-->
+      <input type="checkbox" id="hungry" name="hungry" value="Hungry" />
+      <label for="hungry">Are you hungry??</label> <br />
+      <input type="checkbox" id="sleepy" name="sleepy" value="Sleepy" />
+      <label for="sleepy">Are you sleepy??</label> <br />
+
+      <input type="submit" value="Submit" /> <br />
+      <br />
+
+      <textarea name="mensaje" rows="5" cols="20">placeholder text</textarea><br />
+
+      <!-- inputs button, siempre hay que especificar type-->
+      <button type="button" name="button" onclick="alert('Diste click')">
+        Click me
+      </button> <br />
+      
+      <!-- Inputs con patrones -->
+      <input type="tel" id="tel" name="cel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/> <br />
+      <input type="text" id="codigoPostal" name="codigoPostal" placeholder="11111" required="true" title="3 letras solamente" pattern="[a-zA-Z]{3}" /> <br />
+
+    </form>
+  </body>
+</html>
