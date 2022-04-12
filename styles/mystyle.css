@@ -2,3 +2,14 @@
 body{
     background-color: pink;
 } 
+
+table, th, td {
+    border-collapse: collapse;
+    width: 30%;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
