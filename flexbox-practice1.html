@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sandy Mena">
+    <title>Flexbox practice 1</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .flexcontainer {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            height: 550px;
+        }
+
+        .flexcontainer > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 75px;
+            background-color: crimson;
+            font-size: 30px;
+            padding: 20px;
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flexcontainer">
+        <div>1</div>
+    </div>
+</body>
+</html>
