@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="myScript.js"></script>
+    
+</head>
+<body>
+    <h1>Lo que se puede hacer</h1>
+    <p id="demo">Texto que podemos cambiar</p>
+
+    <button type="button" onclick='myFunction()'>Click me</button> <br/>
+
+    <img id="myImage" src="https://64.media.tumblr.com/ababa0dfa907d20342020fc7c8557af7/tumblr_o6dyl2UUEP1rzo8x9o1_500.gifv" width="100" height="auto"/> <br/>
+    <button type="button" onclick='turnOnLight()'>Turn on the light</button>
+    <button type="button" onclick='turnOffLight()'>Turn off the light</button> <br/>
+
+    <p id="demo2"> Texto que cambiará</p> <br/>
+
+    <script>
+        document.getElementById("demo2").innerHTML = 5+9;
+        document.write(10+5);
+        window.alert("Hola Mundo!!!");
+        alert("Hiki!!")
+    </script>
+
+    <button type="button" onclick='window.print()'>Imprimir</button> <br/>
+
+</body>
+</html>
