@@ -23,11 +23,18 @@
     <script>
         document.getElementById("demo2").innerHTML = 5+9;
         document.write(10+5);
-        window.alert("Hola Mundo!!!");
-        alert("Hiki!!")
+        //window.alert("Hola Mundo!!!");
+        //alert("Hiki!!")
     </script>
 
-    <button type="button" onclick='window.print()'>Imprimir</button> <br/>
+    <!-- Abre la página para imprimir la página-->
+    <button type="button" onclick='window.print()'>Imprimir</button> <br/> 
+
+    <form>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button type="button" onclick='sum()'>Calcular suma</button>
+    </form>
 
 </body>
 </html>
