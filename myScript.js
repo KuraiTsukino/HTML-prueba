@@ -138,3 +138,43 @@ function getDia() {
     document.getElementById("diaSemana").innerHTML = dia;
 }
 
+// Sintaxis de for
+
+/*
+for (inicialización; condición; incremento)
+
+for (let i = 0; i < 5; i++) {
+    código que se ejecuta 5 veces
+}
+
+for in
+
+for (key in objeto) {
+    código que se ejecuta para cada elemento del objeto
+}
+
+*/
+
+const persona = {nombre: "John", apellido:"Smith", edad: 45};
+let text = "";
+for (let x in persona) {
+    text = text + persona[x];
+} 
+
+function errorHandler() {
+    const mensaje = document.getElementById("resultado"); // conseguimos el elemento
+    mensaje.innerHTML = "";
+    let texto = document.getElementById("testError").value;
+
+    try {
+        if (texto == "") throw "No puede estar vacío";
+        if (isNaN(texto)) throw "Debe ser un número";
+        texto = Number(texto);
+        if (texto > 10) throw "Es mayor a 10, número fuera de rango";
+        if (texto < 5) throw "Es menor a 5, número fuera de rango";
+    } catch (error) {
+        mensaje.innerHTML =  "Input " + error;
+    } finally {
+        document.getElementById("testError").value = "";
+    }
+}
