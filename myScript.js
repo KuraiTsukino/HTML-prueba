@@ -51,3 +51,90 @@ let array = [ "elemento1", "elemento2", "elemento3" ]; // Array array [0]
 function functionReturn(param1, param2) {
     return param1 * param2;
 }
+
+// Sintaxis de if 
+
+/* 
+if sencillo
+
+if (condición) {
+    bloque que se ejecuta si se cumple
+}
+
+if else
+
+if (condición) {
+    bloque que se ejecuta si se cumple
+} else {
+    bloque que se ejecuta si no se cumple
+}
+
+if else else if
+
+if (condición) {
+    bloque que se ejecuta si cumple
+} else if (condición2) {
+    bloque que se ejecuta si se cumple condición2
+} else {
+    bloque que se ejecuta si no se cumple ninguna condición
+*/
+
+function getSaludo() {
+    const hoy = new Date();
+    document.getElementById("saludo").innerHTML = hoy.getHours() + ' ' + greeter(hoy.getHours());
+}
+
+function greeter(hora) {
+    let saludo = "";
+    if (hora < 12) {
+        saludo = "Buenos días";
+    } else if (hora < 18) {
+        saludo = "Buenas tardes";
+    } else {
+        saludo = "Buenas noches";
+    } 
+    return saludo;
+}
+
+// Sintaxis de switch
+
+/*
+switch (expresión) {
+    case valor1:
+        bloque código a ejecutar si la expresión es igual a valor1
+        break;
+    case valor2:
+        bloque código a ejecutar si la expresión es igual a valor2
+        break;
+    default:
+} 
+*/
+
+function getDia() {
+    let dia = new Date().getDay()
+    switch (dia) { // getDay() devuelve el día de la semana con un número de 0 a 6, donde 0 es el día de la semana de Domingo
+        case 0:
+            dia = "Domingo";
+            break;
+        case 1:
+            dia = "Lunes";
+            break;
+        case 2:
+            dia = "Martes";
+            break;
+        case 3:
+            dia = "Miercoles";
+            break;
+        case 4:
+            dia = "Jueves";
+            break;
+        case 5:
+            dia = "Viernes";
+            break;
+        case 6:
+            dia = "Sabado";
+            break;
+    }
+    document.getElementById("diaSemana").innerHTML = dia;
+}
+
