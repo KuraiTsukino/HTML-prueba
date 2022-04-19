@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Event listeners</title>
+    <meta name="author" content="Sandy Mena">
+</head>
+<body>
+   <h1>Ejemplo con addEventListener()</h1> 
+
+   <button id="myButton">Click me</button>
+   <p id="fecha"></p>
+
+   <script>
+       document.getElementById("myButton").addEventListener("click", displayDate);
+       document.getElementById("myButton").addEventListener("mouseover", displayGreeting);
+
+       function displayDate() {
+           document.getElementById("fecha").innerHTML = Date();
+       }
+
+       function displayGreeting() {
+           let par = document.createElement("p"); // Creamos un nuevo párrafo
+           par.setAttribute("id", "mensaje"); // Le asignamos un id
+           par.innerHTML = "Hola, soy un nuevo párrafo"; // Le asignamos el texto
+           document.body.appendChild(par); // Lo añadimos al body
+       }
+   </script>
+</body>
+</html>
