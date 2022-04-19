@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sandy Mena"/>
+    <title>Ejemplo de callbacks</title>
+</head>
+<body>
+    <h1>Callbacks</h1>
+
+    <p id="mensaje"></p>
+
+    <script>
+        // Función para imprimir en documento
+
+        function displayer(algo) {
+            document.getElementById('mensaje').innerHTML = algo;
+        }
+
+        // Función 1
+        function miPrimera() {
+            displayer("Hola");
+        }
+
+        // Función 2
+        function miSegunda() {
+            displayer("Mundo");
+        }
+
+        // Ejecutamos funciones
+        miPrimera();
+        miSegunda(); // Solo se ve Mundo por que se sobreescribe el mensaje
+
+        
+    </script>
+</body>
+</html>

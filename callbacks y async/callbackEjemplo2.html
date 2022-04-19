@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sandy Mena"/>
+    <title>Ejemplo de callbacks</title>
+</head>
+<body>
+    <h1>Callbacks</h1>
+    <h2>Segundo ejemplo</h2>
+
+    <p id="mensaje"></p>
+    <p id="mensaje2"></p>
+
+    <script>
+
+        setTimeout(displayerTime, 3000);
+        // Función para imprimir en documento
+
+        function displayer(algo) {
+            document.getElementById('mensaje').innerHTML = algo;
+        }
+
+        // Función 1
+        function miCalculadora(num1, num2, myCallback) {
+            let suma = num1 + num2;
+            //return suma;
+            //displayer(suma) Aquí forzosamente se ve el resultado.
+            myCallback(suma); 
+        
+        }
+        // Sin setTimeout -> Automáticamente se ve el resultado.
+        //miCalculadora(5, 10, displayer);
+        //let resultado = miCalculadora(10, 20);
+        //displayer(resultado); => Así se necesitan dos funciones para desplegar el resultado.
+        
+        setTimeout(miCalculadora(5, 10, displayer, 3000))
+
+        // Función para setTimeout
+        function displayerTime() {
+            document.getElementById('mensaje2').innerHTML = "Hola Mundo";
+        }
+
+
+
+    </script>
+</body>
+</html>
