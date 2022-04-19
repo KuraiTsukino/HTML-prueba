@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de funciones</title>
+    <meta name="author" content="Sandy Mena"/>
+</head>
+<body>
+    <h1>Ejemplo de funciones</h1>
+
+    <p id="multiplicar"></p>
+    <p id="thisEjemplo"></p>
+    <p id="thisObjetoPersona"></p>
+    <p id="thisConstructor"></p>
+    <p id="thisApply"></p>
+
+    <script>
+        function multiplicar(num1, num2) {
+            return num1 * num2;
+        }
+
+        document.getElementById("multiplicar").innerHTML = "El resultado de la multiplicación es: " + multiplicar(2, 3);
+
+        // Ejemplo de this
+        let x = miFunction();
+        function miFunction() {
+            return this;
+        }
+        document.getElementById("thisEjemplo").innerHTML = "El resultado de this es: " + x;
+
+        // This contextual
+        const persona = {
+            nombre: "Sandy",
+            apellido: "Mena",
+            age: 37,
+            informacion: function() {
+                return `${this.nombre} ${this.apellido} tiene ${this.age} años`;
+            }
+        }
+        document.getElementById("thisObjetoPersona").innerHTML = persona.informacion();
+
+        // This constructor
+        function infoEmpleado(param1, param2) {
+            this.nombre = param1;
+            this.apellido = param2;    
+        }
+
+        const empleado = new infoEmpleado("Nirvana", "Green");
+
+        document.getElementById("thisConstructor").innerHTML = empleado.nombre + " " + empleado.apellido;
+
+        // This y apply (argumentos como arrays)
+        const empleado2 = {
+            informacionCompleta: function(ciudad, pais) {
+                return `${this.nombre} ${this.apellido} vive en ${ciudad}, ${pais}`;
+            }
+        }
+
+        const empleado3 = { 
+            nombre: "John", 
+            apellido: "Smith"
+        }
+
+        // apply - aplica el this a una función
+        document.getElementById("thisApply").innerHTML = empleado2.informacionCompleta.apply(empleado3, ["New York", "USA"]);
+
+    </script>
+</body>
+</html>
