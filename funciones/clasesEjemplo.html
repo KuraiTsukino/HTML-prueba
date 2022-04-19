@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sandy Mena"/>
+    <title>Ejemplo de clases</title>
+</head>
+<body>
+    <h1>Ejemplo de clases en JS</h1>
+
+    <p id="objeto"></p>
+
+    <script>
+        // Ejemplo de clase
+        class Car {
+            constructor(nombre, modelo) {
+                this.nombre = nombre;
+                this.modelo = modelo;
+            }
+
+            antiguedad() {
+                let hoy = new Date();
+                return hoy.getFullYear() - this.modelo;
+            }
+        }
+
+        // Instanciar un objeto de la clase Car
+        const carrito = new Car("Atos", 2015);
+
+        // Mostrar el objeto en el HTML
+        document.getElementById("objeto").innerHTML = carrito.nombre + " Modelo: " + carrito.modelo + " Antigüedad: " + carrito.antiguedad() + " años";
+    </script>
+</body>
+</html>
