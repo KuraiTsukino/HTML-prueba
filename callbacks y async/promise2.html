@@ -18,7 +18,14 @@
         setTimeout(function(){ myResolve("Hola Crayola !!"); }, 3000);
         });
 
-        // myPromise.state, myPromise.result
+        // myPromise.state, myPromise.result no se puede acceder
+
+        /*
+        myPromise.then(
+            function (value) { ejecutamos código si fue exitoso },
+            function (error) { ejecutamos código si fue erroneo }
+            );
+        */
         myPromise.then(function(value) {
         document.getElementById("mensaje").innerHTML = value;
         });
